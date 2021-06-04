@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import useStyles from "./styles";
+import { useSelector } from "react-redux";
 
 export default function Header() {
+  const basket = useSelector((state) => state.basket.basket);
   const classes = useStyles();
   return (
     <div className={classes.header}>
@@ -47,9 +49,7 @@ export default function Header() {
           <div className={classes.BasketIcon}>
             <ShoppingBasketIcon />
           </div>
-          {/* <span className="header_optionLineTwo header_basketCount">
-            {/* {basket?.length} */}
-          {/* </span> */}
+          <span className={classes.header_basketCount}>{basket?.length}</span>
         </div>
         {/* </Link> */}
       </div>
