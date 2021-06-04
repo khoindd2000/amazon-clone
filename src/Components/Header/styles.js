@@ -45,8 +45,10 @@ export default makeStyles((theme)=>({
         color: 'white',
     },
     BasketIcon:{
+        color: 'white',
         "&:hover":{
             color: '#cd9042',
+            cursor: 'pointer',
         },
     },
     header_nav:{
@@ -59,5 +61,12 @@ export default makeStyles((theme)=>({
         marginLeft: '10px',
         marginRight: '10px',
         color: 'white',
-    }
+    },
+    header_basketCount:{
+        fontSize: '13px',
+        fontWeight: '800',
+        marginLeft: "10px",
+        marginRight: "10px",
+        color: "white"
+    },
 }))
