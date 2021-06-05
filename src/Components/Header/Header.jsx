@@ -10,12 +10,12 @@ export default function Header() {
   const classes = useStyles();
   return (
     <div className={classes.header}>
-      {/* <Link to="/"> */}
-      <img
-        className={classes.header_logo}
-        src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-      />
-      {/* </Link> */}
+      <Link to="/">
+        <img
+          className={classes.header_logo}
+          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        />
+      </Link>
 
       <div className={classes.header_search}>
         <input className={classes.header_searchInput} type="text" />
@@ -44,14 +44,14 @@ export default function Header() {
           <span className={classes.header_optionLineOne}>Your</span>
           <span className={classes.header_optionLineTwo}>Prime</span>
         </div>
-        {/* <Link to="/checkout"> */}
-        <div className={classes.header_optionBasket}>
-          <div className={classes.BasketIcon}>
-            <ShoppingBasketIcon />
+        <Link to="/checkout">
+          <div className={classes.header_optionBasket}>
+            <div className={classes.BasketIcon}>
+              <ShoppingBasketIcon />
+            </div>
+            <span className={classes.header_basketCount}>{basket?.length}</span>
           </div>
-          <span className={classes.header_basketCount}>{basket?.length}</span>
-        </div>
-        {/* </Link> */}
+        </Link>
       </div>
     </div>
   );
